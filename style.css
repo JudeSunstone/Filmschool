@@ -49,12 +49,13 @@ header {
 }
 .banner-main-text {
     line-height: 150%;
+    width: 414px;
 }
 .banner-quote {
     margin-top: 67.6px;
 }
 .banner-quote-wrapper {
-    width 430px;
+    width: 430px;
     background: #1E4681;
     border-radius: 5px;
     width: 483.63px;
@@ -71,6 +72,21 @@ header {
 .banner-quote-author {
     margin: 0;
     text-align: right;
+}
+.about-title {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 56px;
+}
+.about-descr {
+    display: flex;
+    justify-content: space-between;
+}
+.about-descr-text {
+    width: 662px; /*когда ставлю ширину очему-то картинку начинает сильно тянуть*/
+    font-size: 24px;
+    line-height: 36px;
 }
 
 /*tablet*/
