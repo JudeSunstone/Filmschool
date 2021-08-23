@@ -12,10 +12,19 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
-header {
-    width: 1078px;
+header, main { /*или здесь лучше контейнер задать*/
+    width: 1078px; /*или max-min?*/
     margin: auto;
 }
+
+h2 {
+    font-size: 55px;
+    line-height:  56px;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+}
+
 .banner-details {
     display: flex;
     justify-content: space-between;
@@ -73,21 +82,93 @@ header {
     margin: 0;
     text-align: right;
 }
-.about-title {
-    font-family: 'Roboto Slab', serif;
-    font-weight: bold;
-    font-size: 55px;
-    line-height: 56px;
+.about-wrapper {
+    min-width: 1200px;
+    margin-top: 173.4px;
 }
 .about-descr {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*не работает*/
+    margin-bottom: 77px;
 }
 .about-descr-text {
     width: 662px; /*когда ставлю ширину очему-то картинку начинает сильно тянуть*/
     font-size: 24px;
     line-height: 36px;
 }
+.about-descr-img {
+    width: 314px; 
+    height: 315px; /*надо ли так строго проставлять размеры картинки?*/
+    margin-left: 190px;
+} 
+.about-data {
+    display: flex;
+}
+.about-data h3 {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 32px;
+    margin-bottom: 0;
+}
+.about-data p {
+    font-size: 18px;
+    line-height: 130%;
+}
+.about-data-descr {
+    display: flex; /*почему между ними никак не проставить justify content? у меня нигде не получается*/
+}
+.about-data-descr div {
+    width: 150px;
+    margin-right: 95px;
+}
+.about-data-descr div:last-child {
+    margin-right: 0;
+}
+.about-data-img {
+    margin-right: 132px;
+}
+.format-wrapper {
+    margin-top: 178px;
+    min-width: 970px;
+    margin-bottom: 224px;
+}
+.format-title {
+    margin-bottom: 89px;
+}
+.format-descr {
+    display: flex;
+}
+.format-descr div {
+    margin-right: 122px;
+    font-size: 18px;
+    line-height: 23px;
+}
+/*им надо задать конкретную ширину? это же странное*/
+.format-descr div:last-child {
+    margin-right: 0;
+}
+.format-descr h3 {
+    font-size: 25px;
+    line-height:  32px; 
+    color: #1E4681;
+    margin-bottom: 0;
+}
+.knowledge-title {
+    margin-bottom: 49px;
+}
+/*как сделать, чтобы точки были снаружи? или я неверно вижу?*/
+.knowledge ul {
+    width: 639px;
+    font-size: 24px;
+    line-height: 36px;
+    margin-left: -15px;
+    margin-bottom: 232px;
+}
+.curriculum-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
 /*tablet*/
 /*планшет — размер экрана от 992px до 1279px;*/
