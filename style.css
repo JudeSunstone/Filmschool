@@ -1,51 +1,49 @@
-/*desktop*/
-/*размер экрана больше 1280px;*/
+/*desktop - размер экрана больше 1280px; - это надо обозначить?*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/*font-family: 'Roboto Slab', serif;*/
 /*здесь же 2 импорта? верно? или их можно объединить*/
-
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 20px; /*а здесь надо процент или я от него беру?*/
 }
-header, main { /*или здесь лучше контейнер задать*/
-    width: 1078px; /*или max-min?*/
-    margin: auto;
+header, .banner, .about, .format, .knowledge, .curriculum,
+ .reviews-wrapper, .details, .footer { 
+    /*или здесь лучше контейнер задать*/
+    width: 1078px; /*или max-min?1440px*/ 
+    margin: auto; /*да? или надо точно отступ, как в примере*/
 }
 
 h2 {
     font-size: 55px;
-    line-height:  56px;
+    line-height:  56px; /*как здесь проценты задать?*/
     margin: 0;
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
 }
-
+.logo { /*как задать размер картинки, чтобы он тоже был резиновый?*/
+    margin-top: 21px;
+    margin-bottom: 97px;
+}
 .banner-details {
     display: flex;
     justify-content: space-between;
-    width: 509px;
+    width: 509px; /*45 vw?*/
 }
 .banner-details-online, 
 .banner-details-time, 
 .banner-details-date,
 .banner-main {
     display: flex;
-    align-items: center;
-}
-.logo {
-    margin-top: 21px;
-    margin-bottom: 97px;
+    align-items: center; /*end получается странно, что происходит?*/
 }
 .banner-details {
-    line-height: 115%;
+    line-height: 115%; /*от чег осчитается? от которого родителя?*/
 }
 .banner-details img {
-    width: 22px;
+    width: 22px; /*22/1440 = 0.015vw - когда я ставолю это, то картинка пропадает*/
     height: 22px;
     margin-right: 8px;   
 }
@@ -58,7 +56,26 @@ h2 {
 }
 .banner-main-text {
     line-height: 150%;
-    width: 414px;
+    width: 414px; /*53vw*/
+}
+/*чтобы тень не уезжала надо ставить align items start*/
+.banner-main-img-wrapper {
+    position: relative;
+    width: 21vw; /*и у меня все поехало*/
+}.banner-main-img {
+    width: 100%;
+    display: block;
+    z-index: 1;
+    position: relative;
+}
+.banner-main-shadow {
+    width: 91%;
+    height: 11.5%;
+    position: absolute;
+    right: 0;
+    bottom: -6%;
+    background-color: #EFEFEF;
+    border-radius: 100%;
 }
 .banner-quote {
     margin-top: 67.6px;
@@ -143,7 +160,7 @@ h2 {
     font-size: 18px;
     line-height: 23px;
 }
-/*им надо задать конкретную ширину? это же странное*/
+/*им надо задать конкретную ширину? это же странно*/
 .format-descr div:last-child {
     margin-right: 0;
 }
@@ -156,7 +173,6 @@ h2 {
 .knowledge-title {
     margin-bottom: 49px;
 }
-/*как сделать, чтобы точки были снаружи? или я неверно вижу?*/
 .knowledge ul {
     width: 639px;
     font-size: 24px;
@@ -168,7 +184,127 @@ h2 {
     display: flex;
     flex-wrap: wrap;
 }
+.container-reviews {
+    background-color: #EFEFEF;
+    padding-bottom: 111px; /*111/1440? vh*/
+    padding-top: 91px;
+}
+.reviews-card {
+    width: 791px;
+    height: 451px;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    padding: 40px 46px 10px 45px;
+    margin-top: 63px;
+}
+.reviews-card-data {
+    display: flex;
+}
+.reviews-card-data {
+    display: flex; /*надо ли*/
+}
+.reviews-cards-data-img {
+    margin-right: 30px;
+    margin-left: -25px;
+}
+.reviews-card  {
+    line-height: 30px;
+}
+.reviews-card-data-contacts p {
+    line-height: 30px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 101.38%;
+}
+.container-details {
+     background-color: #9DC9C8;
+     padding: 179px 0 185px 0;
+}
 
+.container-footer {
+    background-color: #000000;
+}
+.details-price {
+    margin-top: 54px;
+    margin-bottom: 67px;
+}
+.details-price p {
+    line-height: 101.38%;
+    margin: 0;
+}
+.details-price p:first-child {
+    font-size: 25px;
+}
+.details-price p:last-child {
+    font-size: 80px;
+}
+.details-descr {
+    display: flex;
+}
+.details-descr-block {
+    margin-right: 70px;
+    line-height: 101.38%;
+    width: 294px;
+}
+.details-descr-block p:first-child {
+    font-size: 25px;
+}
+.details-descr-block p:last-child {
+    font-size: 18px;
+}
+.footer {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    /*align-items: stretch;*/
+}
+.footer-contacts {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 146px;
+}
+.footer-contacts a {
+    text-decoration: none;
+    /*откуда снизу ссылки берутся как блок?*/
+}
+.footer-contacts p {
+    margin: 0;
+}
+.footer-contacts-left {
+    width: 190px;
+}
+.footer-contacts-left-socials {
+    display: flex;
+    /*align-items: flex-end;*/
+    justify-content: space-between;
+}
+.footer-contacts-left img {
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+.footer-contacts-number, .footer-contacts-mail {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    line-height: 101.38%;
+}
+.footer-contacts-number img, .footer-contacts-mail img {
+    margin-right: 22px;
+}
+.footer-contacts-right {
+    margin-top: 54px;
+}
+.footer-contacts-number {
+    margin-bottom: 18px;
+}
+.footer-rights {
+    font-size: 18px;
+    line-height: 101.38%;
+    margin-bottom: 23px;
+}
+/*почему после футера белая полоса в браузере, мы же обнулили отступы*/
 
 /*tablet*/
 /*планшет — размер экрана от 992px до 1279px;*/
