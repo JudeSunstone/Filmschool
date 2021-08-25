@@ -1,21 +1,25 @@
-/*desktop - размер экрана больше 1280px; - это надо обозначить?*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /*здесь же 2 импорта? верно? или их можно объединить*/
-body {
+* {
+    box-sizing: border-box;
+}
+p {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px; /*а здесь надо процент или я от него беру?*/
 }
-header, .banner, .about, .format, .knowledge, .curriculum,
- .reviews-wrapper, .details, .footer { 
-    /*или здесь лучше контейнер задать*/
-    width: 1078px; /*или max-min?1440px*/ 
-    margin: auto; /*да? или надо точно отступ, как в примере*/
-}
+body {   
 
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+header, .banner, .about, .format, .knowledge, /*.curriculum,*/
+ .reviews-wrapper, .details, .footer { 
+    max-width: 1078px; 
+    margin: auto; 
+}
 h2 {
     font-size: 55px;
     line-height:  56px; /*как здесь проценты задать?*/
@@ -30,20 +34,19 @@ h2 {
 .banner-details {
     display: flex;
     justify-content: space-between;
-    width: 509px; /*45 vw?*/
+    width: 509px;
 }
 .banner-details-online, 
 .banner-details-time, 
 .banner-details-date,
 .banner-main {
     display: flex;
-    align-items: center; /*end получается странно, что происходит?*/
 }
 .banner-details {
-    line-height: 115%; /*от чег осчитается? от которого родителя?*/
+    line-height: 115%; 
 }
 .banner-details img {
-    width: 22px; /*22/1440 = 0.015vw - когда я ставолю это, то картинка пропадает*/
+    width: 22px;
     height: 22px;
     margin-right: 8px;   
 }
@@ -132,7 +135,7 @@ h2 {
     line-height: 130%;
 }
 .about-data-descr {
-    display: flex; /*почему между ними никак не проставить justify content? у меня нигде не получается*/
+    display: flex; 
 }
 .about-data-descr div {
     width: 150px;
@@ -180,13 +183,54 @@ h2 {
     margin-left: -15px;
     margin-bottom: 232px;
 }
+.curriculum {
+    width: 1271px; 
+    /*!!!!!!!!!!! почему не так?*/
+    margin: auto;
+}
 .curriculum-list {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
+    margin-top: 127px;
+    margin-bottom: 121px;
 }
+.curriculum-list-card {
+    /*width: 32%; не идет ок*/
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    margin-bottom: 41px;
+}
+.curriculum-list-card:hover {
+    border: 1px solid #000000;
+     /*тут есть граница по маекту, 
+     но при наведении картинка прыгает. почему?   
+      box-sizing: border-box; не работает*/
+} 
+.curriculum-list-card-img {
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+}
+.curriculum-list-card-content {
+    width: 100%;
+    margin-left: 20px;
+    margin-bottom: 23px;
+}
+.curriculum-list-card-content-title {
+    font-size: 30px;
+    line-height: 130%;
+    margin-top: 11px;
+    margin-bottom: 32px;
+}
+.curriculum-list-card-content-text {
+    font-size: 25px;
+    line-height: 130%;
+}
+
 .container-reviews {
     background-color: #EFEFEF;
-    padding-bottom: 111px; /*111/1440? vh*/
+    padding-bottom: 111px; 
     padding-top: 91px;
 }
 .reviews-card {
