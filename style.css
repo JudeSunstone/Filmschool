@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/*здесь же 2 импорта? верно? или их можно объединить*/
 * {
     box-sizing: border-box;
 }
@@ -9,27 +8,27 @@ p {
     padding: 0;
 }
 body {   
-
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
-header, .banner, .about, .format, .knowledge, /*.curriculum,*/
+header, .banner, .about, .format, .knowledge, .curriculum,
  .reviews-wrapper, .details, .footer { 
     max-width: 1078px; 
     margin: auto; 
 }
 h2 {
     font-size: 55px;
-    line-height:  56px; /*как здесь проценты задать?*/
+    line-height:  56px; 
     margin: 0;
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
 }
-.logo { /*как задать размер картинки, чтобы он тоже был резиновый?*/
+.logo {
     margin-top: 21px;
     margin-bottom: 97px;
+    width: 100%
 }
 .banner-details {
     display: flex;
@@ -64,7 +63,7 @@ h2 {
 /*чтобы тень не уезжала надо ставить align items start*/
 .banner-main-img-wrapper {
     position: relative;
-    width: 21vw; /*и у меня все поехало*/
+    width: 21vw; 
 }.banner-main-img {
     width: 100%;
     display: block;
@@ -108,11 +107,11 @@ h2 {
 }
 .about-descr {
     display: flex;
-    justify-content: space-between; /*не работает*/
+    justify-content: space-between; 
     margin-bottom: 77px;
 }
 .about-descr-text {
-    width: 662px; /*когда ставлю ширину очему-то картинку начинает сильно тянуть*/
+    width: 662px; 
     font-size: 24px;
     line-height: 36px;
 }
@@ -166,7 +165,7 @@ h2 {
     font-size: 18px;
     line-height: 23px;
 }
-/*им надо задать конкретную ширину? это же странно*/
+
 .format-descr div:last-child {
     margin-right: 0;
 }
@@ -186,10 +185,10 @@ h2 {
     margin-left: -15px;
     margin-bottom: 232px;
 }
-.curriculum {
+/*.curriculum {
     width: 1271px; 
     margin: auto;
-}
+}*/
 .curriculum-list {
     display: flex;
     flex-wrap: wrap;
@@ -238,31 +237,26 @@ h2 {
 }
 .reviews-card {
     width: 791px;
-    height: 451px;
     background: #FFFFFF;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
     padding: 40px 46px 10px 45px;
     margin-top: 63px;
-}
-.reviews-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    line-height: 30px;
 }
 .reviews-card-data {
-    display: flex; /*надо ли*/
+    display: flex; 
+    margin-top: 30px;
 }
 .reviews-cards-data-img {
     margin-right: 30px;
     margin-left: -25px;
-    margin-top: -50px;
 }
-.reviews-card  {
-    line-height: 30px;
-}
-.reviews-card-data-contacts img {
-    margin-top: 26px;
+.reviews-card-data-contacts {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .reviews-card-data-contacts p {
     font-family: 'Roboto Slab', serif;
@@ -356,14 +350,233 @@ h2 {
     line-height: 101.38%;
     margin-bottom: 23px;
 }
-/*почему после футера белая полоса в браузере, мы же обнулили отступы*/
 
 
 /*tablet*/
 @media (min-width: 992px) and (max-width: 1279px) {
+
+    header, .banner, .about, .format, .knowledge, .curriculum,
+    .reviews-wrapper, .details, .footer { 
+    max-width: 622px; /* 622px сам контейнер, 834 - макет, что надо?)
+    можно ли и тут проценты? 
+    почему будто бы применяется не ко всем сразу*/
+    margin: 0 auto; 
+    }
+    body {
+        font-size: 12px; /*почему-то сразу на все не применяется., 
+        надо ставить отдельно везде*/
+    }
+    /*.logo {
+        как сделать картинку гибкой? проценты?
+    }*/
+    .banner {
+        margin-bottom: 100px; /*можно иначе как-то задать? 
+        оступ берется откуда-то еще дополнительный, 
+        не могу в инспекторе увидеть, откуда именно
+        */
+    }
+    .banner-details {
+        width: 49%; 
+        line-height: 115%;
+    }
+    .banner-details img {
+        width: 12px; 
+        height: 12px;
+    }
+    .banner-main-title {
+        font-size: 46px; /*%? от чего считать?*/
+        line-height: 101.38%;
+    }
+    .banner-main-text {
+        line-height: 150%;
+    }
+    .banner-main-img-wrapper {
+        width: 29%;
+    }
+    .banner-quote-wrapper {
+        width: 45%; /*делю здесь на 622*/
+        line-height: 130%;
+        box-sizing: content-box; /*почему именно так получается правильный размер?*/
+    }
+    .banner-quote-txt {
+        font-size: 14px;
+    }
+    .banner-quote-author {
+        font-size: 12px;
+    }
+    h2 {
+        font-size: 32px;
+        line-height: 101.38%;
+    }
+
+
+
+
+    .about-descr-text {
+        font-size: 14px;
+        line-height: 150%;
+        width: 62%; /*не применяется 368/622*/
+    }
+    .about-descr-img {
+        width: 22%; /*не применяется 181/322*/
+    }
+    .about-data-img {
+        width: 30%; /*134/622 и опять плохо рабоатет - 22%*/
+        margin-right: 0;
+    }
+    .about-data-descr h3 {
+        font-size: 15px;
+        line-height: 130%;
+    }
+    .about-data-descr p {
+        font-size: 11px;
+        line-height: 130%;
+    }
+    /*ширина не получается у всего блока опять*/
+    .format-descr {
+        display: flex;
+        justify-content: space-between;
+        width: 90%; /*561/622*/
+    }
+    .format-descr div {
+        line-height: 130%;
+        margin-right: 0;
+    }
+    .format-descr h3 {
+        font-size: 15px;
+    }
+    .format-descr h3 {
+        font-size: 11px;
+    }
+    .knowledge-title {
+        margin-bottom: 28.5px; /*% ?*/
+    }
+    .knowledge ul {
+        width: 639px;
+        font-size: 14px;
+        line-height: 150%;
+        margin-bottom: 232px; /*от чего здесь считать?*/
+    }
+
+
+    /*что-то отступом случилось, то потому что у body margin 0 auto?*/
+    .curriculum-list-card {
+        width: 34%;
+        /*231 ширина на макете /622 - размер сонтейнера 
+        37% и это неправильно получается, почему??*/
+        border-radius: 17.375px;
+        margin-bottom: 23.75px;
+        margin-right: 21.43px;
+    }
+    .curriculum-list {
+        margin-top: 70px;
+        margin-bottom: 52px;
+    }
+
+    .curriculum-list-card-img {
+        width: 100%;
+        border-radius: 17.375px 17.375px 0 0;
+    }
+    .curriculum-list-card-content {
+        margin-left: 11px;
+        margin-right: 20px;
+        margin-bottom: 13px;
+    }
+    .curriculum-list-card-content-title {
+        font-size: 17px;
+        margin-top: 11px;
+        margin-bottom: 18.53px;
+    }
+    .curriculum-list-card-content-text {
+        font-size: 14px;
+    }
+
+
+
+    .reviews-card {
+        width: 80%; /*458,12 / 622 65%*/    
+        border-radius: 17.375px; 
+        padding: 23px 26px 23px 26px;   
+        margin-top: 36px;
+    }    
+    .reviews-card-data {
+        margin-top: 20px;
+    }
+    .reviews-card-data img {
+        width: 110.04px;
+        margin-right: 17px;
+    }
+    .reviews-card-data-contacts {
+        margin-top: 30px;
+    }
+    .reviews-card-data-contacts p {
+        font-size: 17px;
+        line-height: 101.38%;
+    }
+    .reviews-card-data-contacts img {
+        width: 18.53px;
+    }
+
+
+    .details-price {
+        margin-top: 31px;
+        margin-bottom: 40px;
+
+    }
+    .details-price p:first-child {
+        font-size: 14px;
+        line-height: 101.38%;
+    }
+    .details-price p:last-child {
+        font-size: 46px;
+        line-height: 101.38%;
+    }
+    .details-descr-block p:first-child {
+        font-size: 14px;
+        line-height: 101.38%;
+        margin-bottom: 6px;
+    }
+    .details-descr-block p:last-child {
+        font-size: 10px;
+        line-height: 101.38%; 
+    }
+
+    .footer-contacts {
+        margin-bottom: 84.5px;
+    }
+    .footer-contacts-left {
+        width: calc(190px/622px*100);
+    }
+    .footer-contacts-left img {
+        margin-bottom: 17px;
+        margin-top: 30px;
+    }
+    .footer-contacts-number, .footer-contacts-mail {
+        font-size: 14px;
+    }
+    .footer-contacts-number img, .footer-contacts-mail img {
+        margin-right: 10px;
+    }
+    .footer-contacts-right {
+        margin-top: 35px;
+    }
+    .footer-contacts-number {
+        margin-bottom: 18px;
+    }
+    .footer-rights {
+        font-size: 10px;
+    }
+    /*что и как сделать с картинкаим? До сих пор не понимаю
+    */
+
     
+
+
 }
 
 
 /*mobile*/
 /*азмер экрана от 320px до 991px.*/
+@media (min-width: 320px) and (max-width: 991px) {
+
+}
