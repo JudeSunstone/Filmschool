@@ -15,7 +15,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
-header, .banner, .about, .format, .curriculum, .knowledge, /*.curriculum,*/
+header, .banner, .about, .format, .knowledge, /*.curriculum,*/
  .reviews-wrapper, .details, .footer { 
     max-width: 1078px; 
     margin: auto; 
@@ -186,14 +186,12 @@ h2 {
     margin-left: -15px;
     margin-bottom: 232px;
 }
-/*.curriculum {
+.curriculum {
     width: 1271px; 
-    /*!!!!!!!!!!! почему не так?
     margin: auto;
-}*/
+}
 .curriculum-list {
     display: flex;
-    /*justify-content: space-around;*/
     flex-wrap: wrap;
     margin-top: 127px;
     margin-bottom: 121px;
@@ -203,20 +201,22 @@ h2 {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
     margin-bottom: 41px;
+    margin-right: 37px;
 }
-
+/*.curriculum-list-card:nth-child(3) {
+    margin-right: 0;
+}*/
 /*.curriculum-list-card:hover {
     border: 1px solid #000000;
      /*тут есть граница по маекту, 
      но при наведении картинка прыгает. почему?   
       box-sizing: border-box; не работает*/
-} 
+
 .curriculum-list-card-img {
     width: 100%;
     border-radius: 30px 30px 0 0;
 }
 .curriculum-list-card-content {
-    width: 100%;
     margin-left: 20px;
     margin-bottom: 23px;
 }
