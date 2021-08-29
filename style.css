@@ -15,7 +15,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
-header, .banner, .about, .format, .knowledge, /*.curriculum,*/
+header, .banner, .about, .format, .curriculum, .knowledge, /*.curriculum,*/
  .reviews-wrapper, .details, .footer { 
     max-width: 1078px; 
     margin: auto; 
@@ -116,10 +116,13 @@ h2 {
     font-size: 24px;
     line-height: 36px;
 }
+.about-descr-text1 {
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
 .about-descr-img {
     width: 314px; 
     height: 315px; /*надо ли так строго проставлять размеры картинки?*/
-    margin-left: 190px;
 } 
 .about-data {
     display: flex;
@@ -183,26 +186,26 @@ h2 {
     margin-left: -15px;
     margin-bottom: 232px;
 }
-.curriculum {
+/*.curriculum {
     width: 1271px; 
-    /*!!!!!!!!!!! почему не так?*/
+    /*!!!!!!!!!!! почему не так?
     margin: auto;
-}
+}*/
 .curriculum-list {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    /*justify-content: space-around;*/
     flex-wrap: wrap;
     margin-top: 127px;
     margin-bottom: 121px;
 }
 .curriculum-list-card {
-    /*width: 32%; не идет ок*/
+    width: 32%; 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
     margin-bottom: 41px;
 }
-.curriculum-list-card:hover {
+
+/*.curriculum-list-card:hover {
     border: 1px solid #000000;
      /*тут есть граница по маекту, 
      но при наведении картинка прыгает. почему?   
@@ -242,8 +245,10 @@ h2 {
     padding: 40px 46px 10px 45px;
     margin-top: 63px;
 }
-.reviews-card-data {
+.reviews-card {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .reviews-card-data {
     display: flex; /*надо ли*/
@@ -251,12 +256,15 @@ h2 {
 .reviews-cards-data-img {
     margin-right: 30px;
     margin-left: -25px;
+    margin-top: -50px;
 }
 .reviews-card  {
     line-height: 30px;
 }
+.reviews-card-data-contacts img {
+    margin-top: 26px;
+}
 .reviews-card-data-contacts p {
-    line-height: 30px;
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
     font-size: 30px;
@@ -350,8 +358,12 @@ h2 {
 }
 /*почему после футера белая полоса в браузере, мы же обнулили отступы*/
 
+
 /*tablet*/
-/*планшет — размер экрана от 992px до 1279px;*/
+@media (min-width: 992px) and (max-width: 1279px) {
+    
+}
+
 
 /*mobile*/
 /*азмер экрана от 320px до 991px.*/
