@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 1.4vw;/*20px/1440*/
 }
 p {
     margin: 0;
@@ -15,25 +15,29 @@ p {
 }
 
 .container { 
-    max-width: 75vw; /*1078px;*/
+    max-width: 75vw; /*1078/1440px;*/
     margin: auto; 
 }
-h1 {
-    font-size: 55px; /*или надо как-то иначе задать?*/
-    line-height: 56px; 
+h2 {
+    font-size: 3.8vw; /*55px/1440*/
+    line-height: 3.9vw; /*56px/1440*/
     margin: 0;
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
 }
 .logo {
     margin-top: 1.5vh;  /*21px*/
-    margin-bottom: 6.7vh; /*МАЛО! 97px/1440? или надо от высоты? а как ее высчитать?*/
+    margin-bottom: 6.7vh; /*по маетматике так 97px/1440
+    а по макету будто бы мало выглядит, почему?*/
     width: 8vw;
+}
+.banner {
+    margin-bottom: 12vw; /*173px*/
 }
 .banner-details {
     display: flex;
     justify-content: space-between;
-    width: 25vw; /*509px/1440 - 35vw но это много*/ 
+    width: 35vw; /*509px/1440*/ 
     line-height: 115%; 
 }
 .banner-details-online, 
@@ -42,97 +46,87 @@ h1 {
 .banner-main {
     display: flex;
 }
+.banner-main {
+    justify-content: space-between;
+}
 .banner-details img {
-    width: 22px; /*22/1072 - 2% - очень мало* 4.3% - 22/509 - тоже мало!*/
-    height: 22px;  /*?*/
-    margin-right: 8px;   /*от чего здесь отсчитывать и надо ли?*/
+    width: 1.5vw; /*22px/1440*/
+    height: 1.5vw;  /*22px/1440*/
+    margin-right: 0.6vw;   /*8px/1440*/
+} 
+.banner-main-descr {
+    width: 40vw; 
 }
 .banner-main-title {
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
-    font-size: 80px; /*!*/
-    line-height: 81px; /*от чего считать?*/
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /*а здесь пиксели останутся?*/
+    font-size: 5.5vw;  /*80px/1440*/
+    line-height: 5.6vw; /*81px/1440*/
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .banner-main-text {
     line-height: 150%;
-    width: 28vw; /*414px/1440 
-    почему опять не получается то, что надо?*/
 }
-
-
-/*чтобы тень не уезжала надо ставить align items start*/
 .banner-main-img-wrapper {
     position: relative;
-    width: 21vw; /*304px/1440 - картинка получается огромная - почему?*/
+    /*margin-right: 17vw; /*256/1440*/
+    width: 21vw; /*304px/1440*/
+    margin-top: 1.25vw; /*18/1440*/
 }
 .banner-main-img {
     width: 100%;
     display: block;
-    z-index: 1;
-    position: relative;
-}
-.banner-main-shadow {
-    width: 91%;
-    height: 11.5%;
-    position: absolute;
-    right: 0;
-    bottom: -6%;
-    background-color: #EFEFEF;
-    border-radius: 100%;
 }
 .banner-quote {
-    margin-top: 67.5px; /*?*/
+    margin-top: 4.6vw; /*67.5px; считается от ширины*/
 }
 .banner-quote-wrapper {
-    width: 29vw; /*430px*/
+    width: 34vw; /*483px*/
     background: #1E4681;
-    border-radius: 1%; /*5px/430*/
+    border-radius: 1%; /*5px/430 процент от ширины карточки */
     color: #FFFFFF;
-    line-height: 32px; /*!*/
+    line-height: 2.2vw; /*32px*/
     margin: 0 auto;
-    padding: 19.4px 27px 24px 26.6px ; /*как их вычислять? от чего?*/
+    padding:  19.4px 27px 24px 25px /* 4% 5.6% 5% 5.5%; от ширины родителя-обертки?*/
 }
 .banner-quote-txt {
     margin: 0;
     font-family: 'Roboto Slab', serif;
-    font-size: 25px; /*!*/
+    font-size: 1.7vw; /*25px*/
+    width: 29.9vw; /*430px*/
 }
 .banner-quote-author {
     margin: 0;
     text-align: right;
+    font-size: 1.4vw; /*20px*/
 }
 
 /*tablet*/
 @media (min-width: 992px) and (max-width: 1279px) {
 
     .container { 
-    max-width: 75vw; /* 622px сам контейнер, 834 - макет, что надо?)*/
+    max-width: 75vw; /*622px/834*/
     margin: 0 auto; 
     }
     body {
-        font-size: 12px; /*!*/
+        font-size: 1.4vw; /*12px/834*/
     }
     .logo {
         width: 7.7vw;
-        /*отступы все еще не понимаю как задвать, но это вопрос выше уже был*/
+        margin-top: 2.6vw; 
     }
     .banner {
-        margin-bottom: 100px; /*!*/
+        margin-bottom: 12vw; /*100px*/
     }
     .banner-details {
-        width: 32vw; /*270px/834 - как-то расплылось*/
+        width: 32vw;  /*228*/
         line-height: 115%;
     }
-    .banner-details img {
-        width: 12px; 
-        height: 12px;
-    }
     .banner-main-descr {
-        width: 37vw; /*361px*/
+        width: 37vw; 
     }
     .banner-main-title {
-        font-size: 46px; /*%? от чего считать?*/
+        font-size: 5.5vw;
         line-height: 101.38%;
     }
     .banner-main-text {
@@ -141,19 +135,12 @@ h1 {
     .banner-main-img-wrapper {
         width: 21vw; /*176,07px*/
     }
+
     .banner-quote-wrapper {
-        width: 29vw; /*280,11px/834 - 34vw должно быть, но не походит. почему?; */
+        width: 29vw;
         line-height: 130%;
-        /*радиус тоже надо поменять?*/
-    }
-    .banner-quote-txt {
-        font-size: 14px; /*!*/
-    }
-    .banner-quote-author {
-        font-size: 12px; /*!*/
     }
     h2 {
-        font-size: 32px; /*!*/
         line-height: 101.38%;
     }
 
@@ -167,47 +154,58 @@ h1 {
     margin: 0 auto; 
     }
     body {
-        font-size: 10px; /*!*/
+        font-size: 2.6vw; /*10px*/
     }
     .logo {
-       width: 13vw; /*52,19px*/
+       width: 13vw; /*52,19px/375*/
+       margin-bottom: 12vw; /*45.2px*/
+       margin-top: 9.6vw; /*36*/
     }
     .banner {
-        margin-bottom: 100px; /*?*/
+        margin-bottom: 20vw; /*75.06px/375*/
     }
     .banner-details {
-        width: 60vw; /*227px / 375 - почему-то неправильно*/
+        width: 60vw; /*227px/375*/ 
         line-height: 115%;
     }
     .banner-details img {
-        width: 10.25px; /*!*/
-        height: 10.25px; /*!*/
+        width: 2.7vw; /*10.25px*/
+        height: 2.6vw; /* 9.79px*/
     }
     .banner-main {
         display: flex;
         flex-direction: column;
     }
     .banner-main-title {
-        font-size: 37px; /*!*/
-        width: 32vw;/*274px/375 - все неправильно*/
+        font-size: 9.9vw; /*37px*/
+        width: 70vw;/*265px/375*/
         line-height: 101.38%;
+        margin: 1.9vw 0 4vw 0 ; /*7 15*/
     }
+    .banner-main-text {
+        width: 55vw; /*210px*/
+    }
+    /*все картинки в блоках. vw картинка в блоке зависит от блока
+    потому менять надо блок, не картинку*/
     .banner-main-img-wrapper {
-        width: 29%;
-        text-align: right; /*почему не работает? как переместить картинку вбок?*/
+        width: 37.8vw; /*141,68px*/
+        margin-left: auto;
+        margin-right: 0;
     }
     .banner-quote-wrapper {
-        width: 60vw; /*225,36pх / 375 - */
+        margin-top: 10.3vw; /*38.64px*/
+        width: 60vw; /*225,36pх/375*/
         line-height: 130%;
-        box-sizing: content-box; /*почему именно так получается правильный размер?*/
+        margin: 0 0;
     }
     .banner-quote-txt {
-        font-size: 11px;
+        width: 60vw; /*225,36px*/
+        font-size: 2.9vw; /*11px*/
         line-height: 130%;
     }
     .banner-quote-author {
-        font-size: 10px;
         line-height: 130%;
+        font-size: 2.6vw; /*10px*/
     }
     h2 {
         font-size: 32px; /*!*/
