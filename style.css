@@ -49,7 +49,7 @@ h2 {
 .banner-main {
     justify-content: space-between;
 }
-.banner-details img {
+.banner-details img { 
     width: 1.5vw; /*22px/1440*/
     height: 1.5vw;  /*22px/1440*/
     margin-right: 0.6vw;   /*8px/1440*/
@@ -67,9 +67,10 @@ h2 {
 .banner-main-text {
     line-height: 150%;
 }
+
+/*контейнер не совпадает по размеру!*/
+
 .banner-main-img-wrapper {
-    position: relative;
-    /*margin-right: 17vw; /*256/1440*/
     width: 21vw; /*304px/1440*/
     margin-top: 1.25vw; /*18/1440*/
 }
@@ -100,6 +101,62 @@ h2 {
     text-align: right;
     font-size: 1.4vw; /*20px*/
 }
+/*about*/
+.about-descr {
+    display: flex;
+    justify-content: space-between; 
+    /*margin-bottom: 2.8vw; /*42.5px*/
+    margin-top: 3.2vw; /*47*/
+    margin-bottom: 5.3vw; /*77*/
+}
+.about-descr-text {
+    width: 46vw; /*670px/1440*/
+    font-size: 1.67; /*24px*/
+    line-height: 2.5vw; /*36*/
+}
+.about-descr-text1 {
+    margin-bottom: 2vw; /*30px*/
+}
+.about-descr-img {
+    width: 21.8vw; /*314px/1440*/
+    margin-right: -8vw; 
+} 
+.about-descr-img img {
+    width: 100%;
+}
+.about-data {
+    display: flex;
+    align-items: center;
+}
+.about-data-descr h3 {
+    font-weight: bold;
+    font-size: 1.7vw; /*25px*/
+    line-height: 2.2vw; /*32px*/
+    margin-bottom: 0.5vw; /*8px*/
+}
+.about-data-descr p {
+    font-size: 1.25vw; /*18*/
+    line-height: 130%;
+}
+.about-data-descr {
+    display: flex; 
+}
+.about-data-descr div {
+    width: 10.4vw; /*150*/
+    margin-right: 6.6vw; /*95px*/
+}
+.about-data-descr div:last-child {
+    margin-right: 0;
+}
+.about-data-img {
+    margin-right: 9.2vw; /*132px*/
+    width: 16vw; /*232*/
+}
+.about-data-img img {
+    width: 100%;
+}
+
+
 
 /*tablet*/
 @media (min-width: 992px) and (max-width: 1279px) {
@@ -137,12 +194,17 @@ h2 {
     }
 
     .banner-quote-wrapper {
-        width: 29vw;
+        width: 33vw;
         line-height: 130%;
     }
     h2 {
         line-height: 101.38%;
     }
+/*about*/
+    .about-descr-img {
+        width: 22vw; 
+        margin-right: -5.5vw; 
+    } 
 
 }
 /*mobile*/
@@ -207,9 +269,65 @@ h2 {
         line-height: 130%;
         font-size: 2.6vw; /*10px*/
     }
+    h1 {
+        font-size: 9.8vw; /*37px*/
+    }
     h2 {
-        font-size: 32px; /*!*/
+        font-size: 6.9vw; /*26px*/
         line-height: 101.38%;
     }
+    /*about*/
+    .about-descr {
+        display: flex;
+        flex-direction: column;
+        margin-top: 5.4vw;
+        margin-bottom: 12vw; /*45.7*/
+    }
+    .about-descr-text {
+        width: 100%;
+        margin-bottom: 4vw; /*15*/
+        font-size: 3.2vw; /*12px*/
+        line-height: 4.8vw;
+    }
+    .about-descr-text1 {
+        margin-bottom: 6.6vw; /*25px*/
+    }
+    .about-descr-img {
+        width: 45.5vw; /*170.5px/375*/
+        margin: 0 auto; 
+    } 
+    .about-data {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /*КАК перенести на новую строку??*/
+    .about-data-descr {
+        margin-right: 35.7vw; /*134*/
+    }
+    .about-data-descr h3 {
+        font-weight: bold;
+        font-size: 3.2vw; /*12px*/
+        line-height: 130%;
+        margin-bottom: 1.7vw; /*6.5px*/
+    }
+    .about-data-descr p {
+        font-size: 2.7vw; /*10*/
+    }
+    .about-data-descr {
+        display: flex; 
+    }
+    .about-data-descr div {
+        width: 22.9vw; /*86*/
+        margin-right: 8.8vw; /*33.3px*/
+    }
+    .about-data-descr div:last-child {
+        margin-right: 0;
+    }
+    .about-data-img {
+        display: none;
+    }
+
+
 
 }
