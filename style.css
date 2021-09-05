@@ -67,9 +67,6 @@ h2 {
 .banner-main-text {
     line-height: 150%;
 }
-
-/*контейнер не совпадает по размеру!*/
-
 .banner-main-img-wrapper {
     width: 21vw; /*304px/1440*/
     margin-top: 1.25vw; /*18/1440*/
@@ -155,6 +152,38 @@ h2 {
 .about-data-img img {
     width: 100%;
 }
+/*format*/
+.format-wrapper {
+    margin-top: 11.25vw; /*162px*/
+    width: 67.3vw;/*970px*/
+    margin-bottom: 15.5vw; /* 224px*/
+}
+.format-title {
+    margin-bottom: 6.2vw; /*113  или 89 - 
+    почему второе больше подходит, 
+    хотя контейнер слишком большой для заголовка? 
+    если его уменьшить, то margin слишком большй становится, 
+    хотя визуально тот же должен быть
+    отступ у h3?*/
+}
+.format-descr {
+    display: flex;
+}
+.format-descr div {
+    margin-right: 8.5vw; /*122px*/
+    font-size: 1.25vw; /*18px*/
+    line-height: 130%;
+}
+/*НЕ ПОДХОДИТ ПО РАЗМЕРАМ! Почему? Выставленная ширина помогает плохо*/
+.format-descr div:last-child {
+    margin-right: 0;
+}
+.format-descr h3 { 
+    font-size: 1.7vw; /*25px*/
+    color: #1E4681;
+    margin-bottom: 0.6vw; /*8*/
+}
+
 
 
 
@@ -205,6 +234,18 @@ h2 {
         width: 22vw; 
         margin-right: -5.5vw; 
     } 
+      /*format */
+    .format-descr div {
+        margin-right: 8vw; /*60px*/
+        font-size: 1.25vw; /*18px*/
+        line-height: 130%;
+    }
+    .format-descr h3 { 
+        font-size: 1.8vw; /*15px*/
+        margin-bottom: 0.8vw; /*7*/
+    }
+    
+
 
 }
 /*mobile*/
@@ -298,35 +339,40 @@ h2 {
     } 
     .about-data {
         display: flex;
+    }
+    .about-data-descr {
+        display: flex; 
         flex-wrap: wrap;
     }
-
-    /*КАК перенести на новую строку??*/
-    .about-data-descr {
-        margin-right: 35.7vw; /*134*/
+    .about-data-descr div {
+        width: 22.9vw; /*86*/
+        margin-right: 8.8vw; /*33.3px*/
+        margin-bottom: 9vw;
     }
     .about-data-descr h3 {
         font-weight: bold;
         font-size: 3.2vw; /*12px*/
         line-height: 130%;
-        margin-bottom: 1.7vw; /*6.5px*/
+        margin-bottom: 1.6vw; /*6.5px*/
+        margin-top: 0;
     }
     .about-data-descr p {
         font-size: 2.7vw; /*10*/
     }
-    .about-data-descr {
-        display: flex; 
-    }
-    .about-data-descr div {
-        width: 22.9vw; /*86*/
-        margin-right: 8.8vw; /*33.3px*/
-    }
-    .about-data-descr div:last-child {
-        margin-right: 0;
-    }
     .about-data-img {
         display: none;
     }
+     /*format */
+     .format-descr div {
+        margin-right: 8vw; /*60px*/
+        font-size: 1.25vw; /*18px*/
+        line-height: 130%;
+    }
+    .format-descr h3 { 
+        font-size: 1.8vw; /*15px*/
+        margin-bottom: 0.8vw; /*7*/
+    }
+    
 
 
 
