@@ -27,8 +27,9 @@ h2 {
 }
 .logo {
     margin-top: 1.5vh;  /*21px*/
-    margin-bottom: 6.7vh; /*по маетматике так 97px/1440
-    а по макету будто бы мало выглядит, почему?*/
+    margin-bottom: 6.7vh; 
+/*по маетматике так 97px/1440
+а по макету будто бы мало выглядит, почему?*/
     width: 8vw;
 }
 .banner {
@@ -159,12 +160,13 @@ h2 {
     margin-bottom: 15.5vw; /* 224px*/
 }
 .format-title {
-    margin-bottom: 6.2vw; /*113  или 89 - 
+    margin-bottom: 6.2vw; 
+/*113  или 89 - 
     почему второе больше подходит, 
     хотя контейнер слишком большой для заголовка? 
     если его уменьшить, то margin слишком большй становится, 
     хотя визуально тот же должен быть
-    отступ у h3?*/
+отступ у h3?*/
 }
 .format-descr {
     display: flex;
@@ -183,8 +185,70 @@ h2 {
     color: #1E4681;
     margin-bottom: 0.6vw; /*8*/
 }
+/*knowledge*/
+.knowledge {
+    margin-bottom: 16.1vw; /*232px*/
+}
+.knowledge-title {
+    margin-bottom: 3.4vw; /*49/1440*/
+}
+.knowledge ul {
+    width: 50vw;
+    font-size: 1.7vw; /*24px*/
+    line-height: 150%;
+    margin-left: -1vw; /*-15px*/
+}
+/*curriculum*/
+/*.curriculum {
+    width: 1271px; 
+    margin: auto;
+}*/
+.curriculum-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 127px;
+    margin-bottom: 121px;
+}
+.curriculum-list-card {
+    width: 32%; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    margin-bottom: 41px;
+    margin-right: 37px;
+}
+/*.curriculum-list-card:nth-child(3) {
+    margin-right: 0;
+}*/
+/*.curriculum-list-card:hover {
+    border: 1px solid #000000;
+     /*тут есть граница по маекту, 
+     но при наведении картинка прыгает. почему?   
+      box-sizing: border-box; не работает*/
 
+.curriculum-list-card-img {
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+}
+.curriculum-list-card-content {
+    margin-left: 20px;
+    margin-bottom: 23px;
+}
+.curriculum-list-card-content-title {
+    font-size: 30px;
+    line-height: 130%;
+    margin-top: 11px;
+    margin-bottom: 32px;
+}
+.curriculum-list-card-content-text {
+    font-size: 25px;
+    line-height: 130%;
+}
 
+.container-reviews {
+    background-color: #EFEFEF;
+    padding-bottom: 111px; 
+    padding-top: 91px;
+}
 
 
 /*tablet*/
@@ -234,7 +298,7 @@ h2 {
         width: 22vw; 
         margin-right: -5.5vw; 
     } 
-      /*format */
+/*format */
     .format-descr div {
         margin-right: 8vw; /*60px*/
         font-size: 1.25vw; /*18px*/
@@ -244,8 +308,18 @@ h2 {
         font-size: 1.8vw; /*15px*/
         margin-bottom: 0.8vw; /*7*/
     }
+/*knowledge*/
+    .knowledge {
+        margin-bottom: 16.1vw; /*232px*/
+    }
+    .knowledge-title {
+        margin-bottom: 3.4vw; /*49/1440*/
+    }
+    .knowledge ul {
+        width: 50vw;
+        margin-left: -2vw; 
+    }
     
-
 
 }
 /*mobile*/
@@ -317,7 +391,7 @@ h2 {
         font-size: 6.9vw; /*26px*/
         line-height: 101.38%;
     }
-    /*about*/
+/*about*/
     .about-descr {
         display: flex;
         flex-direction: column;
@@ -362,16 +436,33 @@ h2 {
     .about-data-img {
         display: none;
     }
-     /*format */
+/*format */
+     .format-descr {
+         flex-direction: column;
+     }
      .format-descr div {
-        margin-right: 8vw; /*60px*/
-        font-size: 1.25vw; /*18px*/
-        line-height: 130%;
+        width: 45vw;
+        font-size: 2.6vw; /*10px*/
+        margin-bottom: 8vw; /*30*375*/
     }
     .format-descr h3 { 
-        font-size: 1.8vw; /*15px*/
-        margin-bottom: 0.8vw; /*7*/
+        font-size: 3.2vw; /*12px*/ 
+        margin-bottom: 1.6vw; /*6*/
+        margin-top: 0;
     }
+/*knowledge*/
+    .knowledge {
+        margin-bottom: 16.8vw; /*63px*/
+    }
+    .knowledge-title {
+        margin-bottom: 4.5vw; /*17*/
+    }
+    .knowledge ul {
+        width: 82vw; /*307*/
+        margin-left: -2vw; 
+        font-size: 3.2vw; /*12*/
+    }
+
     
 
 
