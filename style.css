@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*в Firefox старнные отступы появляются*/
 * {
     box-sizing: border-box;
 }
@@ -16,7 +17,7 @@ p {
 
 .container { 
     max-width: 75vw; /*1078/1440px;*/
-    margin: auto; 
+    margin: 0 11vw; /*!*/
 }
 h2 {
     font-size: 3.8vw; /*55px/1440*/
@@ -69,31 +70,30 @@ h2 {
 .banner-main-img-wrapper {
     width: 21vw; /*304px/1440*/
     margin-top: 1.25vw; /*18/1440*/
+    margin-right: 8.2vw;
 }
 .banner-main-img {
     width: 100%;
     display: block;
+    
 }
 .banner-quote {
     margin-top: 4.6vw; /*67.5px; считается от ширины*/
-}
-.banner-quote-wrapper {
+    padding: 2% 2.5% 3% 3%; /*19.4px 27px 24px 25px */
     width: 34vw; /*483px*/
-    background: #1E4681;
+    margin: 0 auto;
+    margin-top: 4.6vw;
     border-radius: 1%; /*5px/430 процент от ширины карточки */
+    background: #1E4681;
     color: #FFFFFF;
     line-height: 2.2vw; /*32px*/
-    margin: 0 auto;
-    padding:  19.4px 27px 24px 25px /* 4% 5.6% 5% 5.5%; от ширины родителя-обертки?*/
 }
 .banner-quote-txt {
-    margin: 0;
     font-family: 'Roboto Slab', serif;
     font-size: 1.7vw; /*25px*/
     width: 29.9vw; /*430px*/
 }
 .banner-quote-author {
-    margin: 0;
     text-align: right;
     font-size: 1.4vw; /*20px*/
 }
@@ -101,9 +101,9 @@ h2 {
 .about-descr {
     display: flex;
     justify-content: space-between; 
-    /*margin-bottom: 2.8vw; /*42.5px*/
     margin-top: 3.2vw; /*47*/
     margin-bottom: 5.3vw; /*77*/
+    align-items: center;
 }
 .about-descr-text {
     width: 46vw; /*670px/1440*/
@@ -115,11 +115,11 @@ h2 {
 }
 .about-descr-img {
     width: 21.8vw; /*314px/1440*/
-    margin-right: -8vw; 
-} 
-.about-descr-img img {
-    width: 100%;
+    margin-right: 0; 
 }
+.about-descr-img img {
+   width: 100%;
+} 
 .about-data {
     display: flex;
     align-items: center;
@@ -159,12 +159,6 @@ h2 {
 }
 .format-title {
     margin-bottom: 6.2vw; 
-/*113  или 89 - 
-    почему второе больше подходит, 
-    хотя контейнер слишком большой для заголовка? 
-    если его уменьшить, то margin слишком большй становится, 
-    хотя визуально тот же должен быть
-отступ у h3?*/
 }
 .format-descr {
     display: flex;
@@ -174,9 +168,9 @@ h2 {
     font-size: 1.25vw; /*18px*/
     line-height: 130%;
 }
-/*НЕ ПОДХОДИТ ПО РАЗМЕРАМ! Почему? Выставленная ширина помогает плохо*/
 .format-descr div:last-child {
     margin-right: 0;
+/*почему ширина не та?*/
 }
 .format-descr h3 { 
     font-size: 1.7vw; /*25px*/
@@ -197,36 +191,30 @@ h2 {
     margin-left: -1vw; /*-15px*/
 }
 /*curriculum*/
-
+/*7-ая карточка немного не та, что надо, почему?*/
 .curriculum-list {
     display: flex;
     flex-wrap: wrap;
     margin-top: 8.8vw;
     margin-bottom: 8.4vw;
     position: relative;
-    right: 6vw;
+    right: 11vw;
+    width: 100vw;
+    padding: 0 5.5vw;
 }
 .curriculum-list-card {
-/*должна быть ширина 27, но не становится три в ряд*/
     width: 27vw; 
-/*height: 22.7vw; 328px если ставить высоту, то 7 и 8 карточка 
-что-то странное с размерами творят*/
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 7%;
-    margin: 2.27vw;
-
+    margin: 1vw;
 }
 .curriculum-list-card-img {
     width: 100%;
-    /*border-radius: 30px 30px 0 0;*/
 }
 .curriculum-list-card-content {
     height: 49%;
     padding: 5%;
     padding-top: 2.5%;
-    /*display: flex;
-    flex-direction: column;
-    justify-content: space-between;*/
 }
 .curriculum-list-card-content-title {
     font-size: 2vw;
@@ -250,7 +238,6 @@ h2 {
     background: #FFFFFF;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
     border-radius: 4%; 
-/*30px получается очень странно*/
     padding: 5% 5.9% 1.3% 5.7%; /*40px 46px 10px 45px*/
     margin-top: 4.4vw; /*63px*/
     line-height: 150%;
@@ -277,13 +264,109 @@ h2 {
     line-height: 101.38%;
 }
 
+/*details*/
+.container-details {
+    background-color: #9DC9C8;
+    padding: 12.5vw 0 12.8vw;/*179px 0 185px 0*/
+}
+.details-price {
+   margin-top: 4vw; /*54px*/
+   margin-bottom: 4.6vw; /*67px*/
+}
+.details-price p {
+   line-height: 101.38%;
+   margin: 0;
+}
+.details-price p:first-child {
+   font-size: 1.7vw; /*25px*/
+}
+.details-price p:last-child {
+   font-size: 5.6vw; /*80*/
+}
+.details-descr {
+   display: flex;
+}
+.details-descr-block p {
+   margin-right: 4.8vw; /*70px*/
+   line-height: 101.38%;
+   width: 20.4vw; /*294px*/
+}
+.details-descr-block p:first-child {
+   font-size: 1.7vw; /*25px*/
+   margin-bottom: 0.8vw; 
+}
+.details-descr-block p:last-child {
+   font-size: 1.25vw; /*18px*/
+}
+/*footer*/
+.container-footer {
+    background-color: #000000;
+ }
+.footer {
+   color: #FFFFFF;
+   display: flex;
+   flex-direction: column;
+}
+.footer-contacts {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 10vw; /* 146px*/
+}
+.footer-contacts a {
+   text-decoration: none;
+}
+.footer-contacts p {
+   margin: 0;
+}
+.footer-logo {
+    width: 8vw;
+}
+.footer-insta,
+.footer-fb,
+.footer-vk,
+.footer-viber {
+    width: 2.4vw;
+    margin-right: 1.2vw; 
+    margin-bottom: 2vw; /*30px*/
+    margin-top: 3.5vw; /*50px*/
+}
+.footer-contacts-left {
+   /*width: 190px;*/
+   margin-top: 3.5vw; /*50*/
+}
+.footer-contacts-left-socials {
+   display: flex;
+   justify-content: space-between;
+}
+.footer-contacts-number, .footer-contacts-mail {
+   display: flex;
+   align-items: center;
+   font-size: 1.7vw; /*25px*/
+   line-height: 101.38%;
+}
+.footer-contacts-number img, .footer-contacts-mail img {
+    width: 1.9vw;
+    margin-right: 1.5vw; /*22px*/
+}
+.footer-contacts-right {
+   margin-top: 3.75vw; /*54px*/
+}
+.footer-contacts-number {
+   margin-bottom: 1.25vw; /*18px*/
+}
+.footer-rights {
+   font-size: 1.25vw; /*18px*/
+   line-height: 101.38%;
+   margin-bottom: 1.6vw; /*23px*/
+}
+
+
+
 
 /*tablet*/
-@media (min-width: 992px) and (max-width: 1279px) {
-
+@media (max-width: 1279px) {
     .container { 
     max-width: 75vw; /*622px/834*/
-    margin: 0 auto; 
     }
     body {
         font-size: 1.4vw; /*12px/834*/
@@ -303,17 +386,13 @@ h2 {
         width: 37vw; 
     }
     .banner-main-title {
-        font-size: 5.5vw;
-        line-height: 101.38%;
-    }
-    .banner-main-text {
-        line-height: 150%;
+        width: 43vw;
+        margin-top: 2vw;
     }
     .banner-main-img-wrapper {
         width: 21vw; /*176,07px*/
     }
-
-    .banner-quote-wrapper {
+    .banner-quote {
         width: 33vw;
         line-height: 130%;
     }
@@ -347,10 +426,6 @@ h2 {
         margin-left: -2vw; 
     }
 /*сurriculum*/
-        
-    .curriculum-list-card {
-        width: 27.7vw;  /*231,09*/
-    }
     .curriculum-list-card-content-text {
         font-size: 1.6vw;
     }
@@ -362,18 +437,21 @@ h2 {
     .reviews-cards-data-img {
         width: 13vw;
     }
+    /*.reviews-card-data-contacts {
+        margin-top: 1.6vw; /*14px*/
 
-    .reviews-card-data-contacts {
-        margin-top: 1.6vw; /*14px*/ 
-    }
     .reviews-card-data-contacts img {
         width: 2.2vw; /*18,53px*/
     }
+/*footer*/
+    .footer-rights {
+        margin-bottom: 3vw; /*25px*/
+    }
+/*отступ снизу почему-то большой в этой версии*/
 
 /*mobile*/
 /*pазмер экрана от 320px до 991px.*/
-@media (min-width: 320px) and (max-width: 991px) {
-    
+@media (max-width: 991px) {
     .container { 
     max-width: 81vw; /* 307px сам контейнер, 375 - макет*/
     margin: 0 auto; 
@@ -410,8 +488,6 @@ h2 {
     .banner-main-text {
         width: 55vw; /*210px*/
     }
-    /*все картинки в блоках. vw картинка в блоке зависит от блока
-    потому менять надо блок, не картинку*/
     .banner-main-img-wrapper {
         width: 37.8vw; /*141,68px*/
         margin-left: auto;
@@ -512,7 +588,6 @@ h2 {
     }
 /*сurriculum*/
     .curriculum-list {
-/*почему не работает flex direction?*/
         flex-direction: column; 
         align-items: center;
     }
@@ -526,8 +601,6 @@ h2 {
         font-size: 3vw; /*12px*/
     }
 /*reviews*/
-/*заголовок не в том размере, почему?
-Вообще стили будто не применяются*/
     .container-reviews {
         padding-bottom: 14vw; /*53px*/
         padding-top: 11vw; /*42px*/
