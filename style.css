@@ -454,7 +454,6 @@ h2 {
 @media (max-width: 991px) {
     .container { 
     max-width: 81vw; /* 307px сам контейнер, 375 - макет*/
-    margin: 0 auto; 
     }
     body {
         font-size: 2.6vw; /*10px*/
@@ -493,11 +492,11 @@ h2 {
         margin-left: auto;
         margin-right: 0;
     }
-    .banner-quote-wrapper {
+    .banner-quote {
         margin-top: 10.3vw; /*38.64px*/
         width: 60vw; /*225,36pх/375*/
         line-height: 130%;
-        margin: 0 0;
+        margin-left: 0.5vw;
     }
     .banner-quote-txt {
         width: 60vw; /*225,36px*/
@@ -593,6 +592,7 @@ h2 {
     }
     .curriculum-list-card {
         width: 49vw; /*185,92*/
+        margin-bottom: 6.4vw;
     }
     .curriculum-list-card-content-title {
         font-size: 4vw; /*14px;*/
@@ -625,4 +625,67 @@ h2 {
     .reviews-card-data-contacts img {
         width: 3.7vw;
     }
+ /*details*/
+    .details-price {
+        margin-top: 5vw; /*22px*/
+        margin-bottom: 8.5vw; /*32px*/
+    }
+    .details h2 {
+        width: 59vw; /*224*/
+    }
+    .details-price p:first-child {
+        font-size: 3.2vw; /*12px*/
+    }
+    .details-price p:last-child {
+        font-size: 9.8vw; /*37*/
+    }
+    .details-descr-block p {
+        margin-right: 8.3vw; /*31px*/
+        width: 37vw; /*140px*/
+    }
+    .details-descr-block p:first-child {
+        font-size: 3.2vw; /*12px*/
+        margin-bottom: 1vw; 
+    }
+    .details-descr-block p:last-child {
+        font-size: 2.6vw; /*10px*/
+    }
+/*footer*/
+    .footer-contacts {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10vw; /* 146px*/
+    }
+    .footer-logo {
+        width: 14vw;
+    }
+    .footer-insta,
+    .footer-fb,
+    .footer-vk,
+    .footer-viber {
+        width: 4vw;
+        margin-right: 2.2vw; 
+        margin-bottom: 12vw; /*47px*/
+    }
+    .footer-contacts-left {
+        margin-top: 6vw; /*23*/
+    }
+    .footer-contacts-left-socials {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .footer-contacts-number, .footer-contacts-mail {
+        font-size: 3.2vw; /*12px*/
+    }
+    .footer-contacts-number img, .footer-contacts-mail img {
+        width: 3.3vw;
+    }
+    .footer-contacts-right {
+        margin-top: 0;
+    }
+    .footer-rights {
+        font-size: 2.6vw; /*10px*/
+        margin-bottom: 4.5vw; /*17px*/
+    }
+
 }}
