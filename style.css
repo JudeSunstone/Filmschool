@@ -94,6 +94,7 @@ h2 {
     width: 29.9vw; /*430px*/
 }
 .banner-quote-author {
+    margin-top: 0.5vw;
     text-align: right;
     font-size: 1.4vw; /*20px*/
 }
@@ -162,15 +163,19 @@ h2 {
 }
 .format-descr {
     display: flex;
+    justify-content: space-around;
 }
 .format-descr div {
-    margin-right: 8.5vw; /*122px*/
+    /*margin-right: 8.5vw; /*122px*/*/
     font-size: 1.25vw; /*18px*/
     line-height: 130%;
+    width: 18.1vw;
+}
+.format-descr div:nth-child(2) {
+    width: 21vw;
 }
 .format-descr div:last-child {
     margin-right: 0;
-/*почему ширина не та?*/
 }
 .format-descr h3 { 
     font-size: 1.7vw; /*25px*/
@@ -191,7 +196,9 @@ h2 {
     margin-left: -1vw; /*-15px*/
 }
 /*curriculum*/
-/*7-ая карточка немного не та, что надо, почему?*/
+/*7-ая карточка немного не та, что надо, почему?
+надо положить в обертку нижнюю часть, щачем разделить flex 
+и убрать отступы*/
 .curriculum-list {
     display: flex;
     flex-wrap: wrap;
@@ -200,7 +207,7 @@ h2 {
     position: relative;
     right: 11vw;
     width: 100vw;
-    padding: 0 5.5vw;
+    padding: 0 5.5%;
 }
 .curriculum-list-card {
     width: 27vw; 
